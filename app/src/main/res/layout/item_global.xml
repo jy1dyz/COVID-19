@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_global"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/global"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="19sp"
+            android:textColor="@color/colorHint" />
+
+        <TextView
+            android:id="@+id/tv_cases_global"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coronavirus_cases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="19sp"
+            android:textColor="@color/colorHint"/>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_229_987"
+            android:textSize="19sp"
+            android:textColor="@color/colorHint"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

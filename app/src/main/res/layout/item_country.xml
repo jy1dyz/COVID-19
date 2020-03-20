@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="China"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="22sp"
+            android:textColor="@color/colorText" />
+        <LinearLayout
+            android:id="@+id/container_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Случаи:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textColor="@color/colorHint"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сегодня:"
+                android:textSize="16sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorHint"/>
+
+            <TextView
+                android:id="@+id/tv_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Активно:"
+                android:textSize="16sp"
+                android:textColor="@color/colorHint"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Смертельные случаи:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textColor="@color/colorHint"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_today_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сегодня:"
+                android:textSize="16sp"
+                android:textColor="@color/colorHint"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Выздоровело:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textColor="@color/colorHint"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_critical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Критические случаи:"
+                android:textSize="16sp"
+                android:textColor="@color/colorHint"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
