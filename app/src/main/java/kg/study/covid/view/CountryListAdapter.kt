@@ -4,16 +4,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.util.Util
 import kg.study.covid.R
 import kg.study.covid.model.Country
 import kg.study.covid.util.getProgressDrawable
+import kg.study.covid.util.transliteration
 import kotlinx.android.synthetic.main.item_country.view.*
+
+import kotlin.collections.ArrayList
 
 class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapter<CountryListAdapter.CountryViewHolder>() {
 
     fun updateCountries(newCountries:List<Country>) {
         countries.clear()
         countries.addAll(newCountries)
+        notifyDataSetChanged()
+    }
+
+    fun updateCountry(country: Country) {
+        countries.clear()
+        countries.add(country)
         notifyDataSetChanged()
     }
     class CountryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -26,7 +36,10 @@ class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapte
         private val recovered = view.tv_recovered
         private val active = view.tv_active
         private val critical = view.tv_critical
+        private val totalTests = view.tv_total_tests
         private val progressDrawable = getProgressDrawable(view.context)
+        //private val rusCountryName = transliteration("$countryName" )
+
 
         fun bind(country: Country) {
             countryName.text = country.countryName
@@ -37,6 +50,7 @@ class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapte
             recovered.text = country.recovered.plus(" recovered")
             active.text = country.active.plus(" active")
             critical.text = country.critical.plus(" critical")
+            totalTests.text = country.totalTests.plus(" total tests")
         }
     }
 
@@ -49,6 +63,9 @@ class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapte
 
 
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
+        //val countryTask: Country = filterCountries[position]
         holder.bind(countries[position])
     }
+
+
 }

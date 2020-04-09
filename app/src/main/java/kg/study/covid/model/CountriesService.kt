@@ -23,4 +23,8 @@ class CountriesService {
         return api.getCountries()
     }
 
+    fun getCountry():Single<Country> {
+        return api.getCountry("Kyrgyzstan")
+    }
+
 }

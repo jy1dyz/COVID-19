@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
     android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
     app:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:orientation="vertical">
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/tv_country"
@@ -21,39 +22,34 @@
             android:ellipsize="end"
             android:text="China"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textSize="22sp"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"
+            android:textSize="22sp" />
+
         <LinearLayout
             android:id="@+id/container_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/tv_cases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:text="Случаи:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="16sp"
                 android:textColor="@color/colorHint"
-                android:layout_marginEnd="10dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_today"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Сегодня:"
-                android:textSize="16sp"
                 android:layout_marginEnd="10dp"
-                android:textColor="@color/colorHint"/>
+                android:text="Сегодня:"
+                android:textColor="@color/colorHint"
+                android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tv_active"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Активно:"
-                android:textSize="16sp"
-                android:textColor="@color/colorHint"/>
         </LinearLayout>
 
         <LinearLayout
@@ -61,23 +57,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv_deaths"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Смертельные случаи:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="16sp"
-                android:textColor="@color/colorHint"
-                android:layout_marginEnd="10dp"/>
 
             <TextView
-                android:id="@+id/tv_today_two"
+                android:id="@+id/tv_active"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Сегодня:"
-                android:textSize="16sp"
-                android:textColor="@color/colorHint"/>
+                android:layout_marginEnd="10dp"
+                android:text="Активно:"
+                android:textColor="@color/colorHint"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Выздоровело:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorHint"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -86,24 +85,50 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/tv_recovered"
+                android:id="@+id/tv_deaths"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Выздоровело:"
+                android:layout_marginEnd="10dp"
+                android:text="Смертельные:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="16sp"
                 android:textColor="@color/colorHint"
-                android:layout_marginEnd="10dp"/>
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_today_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сегодня:"
+                android:textColor="@color/colorHint"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_critical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Критические случаи:"
-                android:textSize="16sp"
-                android:textColor="@color/colorHint"/>
+                android:layout_marginEnd="10dp"
+                android:text="Критические:"
+                android:textColor="@color/colorHint"
+                android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/tv_total_tests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Всего тестов:"
+                android:textColor="@color/colorHint"
+                android:textSize="16sp" />
         </LinearLayout>
 
     </LinearLayout>

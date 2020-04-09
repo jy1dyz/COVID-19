@@ -32,6 +32,7 @@ class GlobalFragment : Fragment() {
             ViewModelProviders.of(this).get(GlobalViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_global, container, false)
 
+
         val globalList : RecyclerView = root.findViewById(R.id.global_list)
         globalList.setHasFixedSize(true)
         globalList.layoutManager = LinearLayoutManager(activity)

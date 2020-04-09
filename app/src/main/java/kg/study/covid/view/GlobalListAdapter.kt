@@ -26,9 +26,9 @@ class GlobalListAdapter(var global: ArrayList<GlobalData>): RecyclerView.Adapter
         private val progressDrawable = getProgressDrawable(view.context)
 
         fun bind(global: GlobalData) {
-            cases.text = global.cases.plus(" - Global Coronavirus cases")
-            deaths.text = global.deaths.plus(" - Global Deaths")
-            recovered.text = global.recovered.plus(" - Global Recovered")
+            cases.text = global.cases.plus(" - Global cases")
+            deaths.text = global.deaths.plus(" - Global deaths")
+            recovered.text = global.recovered.plus(" - Global recovered")
         }
         }
 

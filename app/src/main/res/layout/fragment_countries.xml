@@ -5,6 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.countries.CountriesFragment">
+<!--
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/kyrgyzstan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_kyrgyzstan"
+        app:layout_constraintBottom_toTopOf="@id/countriesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="8dp"/> -->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/countriesList"

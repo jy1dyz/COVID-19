@@ -25,6 +25,9 @@ data class Country(
     val active: String?,
 
     @SerializedName("critical")
-    val critical: String?
+    val critical: String?,
+
+    @SerializedName("totalTests")
+    val totalTests: String?
 
 )

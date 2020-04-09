@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">COVID-19</string>
     <string name="title_activity_covid">CovidActivity</string>
-    <string name="title_global">Global COVID</string>
-    <string name="title_countries">COVID by Country</string>
-    <string name="title_about">About</string>
+    <string name="title_global">Global</string>
+    <string name="title_countries">Countries</string>
+    <string name="title_about">Kyrgyzstan</string>
     <string name="global">Global</string>
     <string name="coronavirus_cases">Coronavirus cases</string>
     <string name="_229_987">229,987</string>
