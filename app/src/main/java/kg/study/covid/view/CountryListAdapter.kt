@@ -1,25 +1,19 @@
 package kg.study.covid.view
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.util.Util
+import kg.study.covid.CustomItemClickListener
 import kg.study.covid.R
 import kg.study.covid.model.Country
 import kg.study.covid.util.getProgressDrawable
-import kg.study.covid.util.transliteration
 import kotlinx.android.synthetic.main.item_country.view.*
 
-import kotlin.collections.ArrayList
-
 class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapter<CountryListAdapter.CountryViewHolder>() {
-
-    fun updateCountries(newCountries:List<Country>) {
-        countries.clear()
-        countries.addAll(newCountries)
-        notifyDataSetChanged()
-    }
 
     fun updateCountry(country: Country) {
         countries.clear()
@@ -65,6 +59,47 @@ class CountryListAdapter(var countries: ArrayList<Country>): RecyclerView.Adapte
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         //val countryTask: Country = filterCountries[position]
         holder.bind(countries[position])
+    }
+
+   /** override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(charSequence: CharSequence): FilterResults {
+                val charString = charSequence.toString()
+                if (charString.isEmpty()) {
+                    filteredCountriesList = countries
+                } else {
+                    val filteredList: ArrayList<Country> = ArrayList()
+                    for (row in countries) {
+
+                        //change this to filter according to your case
+                        if (row.countryName?.toLowerCase()!!.contains(charString.toLowerCase())) {
+                            filteredList.add(row)
+                        }
+                    }
+                    filteredCountriesList = filteredList
+                }
+                val filterResults = FilterResults()
+                filterResults.values = filteredCountriesList
+                return filterResults
+            }
+
+            override fun publishResults(
+                charSequence: CharSequence,
+                filterResults: FilterResults
+            ) {
+                filteredCountriesList = filterResults.values as ArrayList<Country>
+                notifyDataSetChanged()
+            }
+        }
+
+    } */
+
+    companion object {
+        fun updateCountries(countryListAdapter: CountryListAdapter, newCountries:List<Country>) {
+            countryListAdapter.countries.clear()
+            countryListAdapter.countries.addAll(newCountries)
+            countryListAdapter.notifyDataSetChanged()
+        }
     }
 
 

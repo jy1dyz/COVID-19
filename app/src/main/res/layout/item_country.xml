@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,6 +9,7 @@
     app:cardCornerRadius="4dp">
 
     <LinearLayout
+        android:id="@+id/container_for_whole"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -23,7 +24,8 @@
             android:text="China"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorText"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:fontFamily="@font/montserrat"/>
 
         <LinearLayout
             android:id="@+id/container_one"
@@ -39,7 +41,8 @@
                 android:text="Случаи:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
             <TextView
                 android:id="@+id/tv_today"
@@ -48,7 +51,8 @@
                 android:layout_marginEnd="10dp"
                 android:text="Сегодня:"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
         </LinearLayout>
 
@@ -65,7 +69,8 @@
                 android:layout_marginEnd="10dp"
                 android:text="Активно:"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
 
             <TextView
@@ -76,7 +81,8 @@
                 android:text="Выздоровело:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
         </LinearLayout>
 
@@ -94,7 +100,8 @@
                 android:text="Смертельные:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
             <TextView
                 android:id="@+id/tv_today_two"
@@ -102,7 +109,8 @@
                 android:layout_height="wrap_content"
                 android:text="Сегодня:"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
         </LinearLayout>
 
@@ -119,7 +127,8 @@
                 android:layout_marginEnd="10dp"
                 android:text="Критические:"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
             <TextView
                 android:id="@+id/tv_total_tests"
@@ -128,9 +137,16 @@
                 android:layout_marginEnd="10dp"
                 android:text="Всего тестов:"
                 android:textColor="@color/colorHint"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"
+        android:layout_below="@id/container_for_whole"/>
+
+</RelativeLayout>

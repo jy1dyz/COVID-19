@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +9,7 @@
     app:cardCornerRadius="4dp">
 
     <LinearLayout
+        android:id="@+id/container_for_whole"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
@@ -23,7 +24,8 @@
             android:text="@string/global"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="19sp"
-            android:textColor="@color/colorHint" />
+            android:textColor="@color/colorHint"
+            android:fontFamily="@font/montserrat"/>
 
         <TextView
             android:id="@+id/tv_cases_global"
@@ -32,7 +34,8 @@
             android:text="@string/coronavirus_cases"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textSize="19sp"
-            android:textColor="@color/colorHint"/>
+            android:textColor="@color/colorHint"
+            android:fontFamily="@font/montserrat"/>
 
         <TextView
             android:id="@+id/tv_amount"
@@ -40,8 +43,15 @@
             android:layout_height="wrap_content"
             android:text="@string/_229_987"
             android:textSize="19sp"
-            android:textColor="@color/colorHint"/>
+            android:textColor="@color/colorHint"
+            android:fontFamily="@font/montserrat"/>
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"
+        android:layout_below="@id/container_for_whole"/>
+
+</RelativeLayout>
