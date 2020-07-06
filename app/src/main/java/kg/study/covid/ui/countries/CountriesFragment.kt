@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kg.study.covid.ItemOffsetDecoration
 import kg.study.covid.R
 import kg.study.covid.view.CountryListAdapter
 import kotlinx.android.synthetic.main.fragment_countries.*
@@ -17,9 +18,6 @@ class CountriesFragment : Fragment() {
 
     lateinit var countriesViewModel: CountriesViewModel
     private val countriesAdapter = CountryListAdapter(arrayListOf())
-
-   // private val kyrgyzstanAdapter = KyrgyzstanAdapter(arrayListOf())
-
 
 
     override fun onCreateView(
@@ -43,8 +41,10 @@ class CountriesFragment : Fragment() {
         val countriesList : RecyclerView = root.findViewById(R.id.countriesList)
         countriesList.setHasFixedSize(true)
         countriesList.layoutManager = LinearLayoutManager(activity)
+        countriesList.addItemDecoration(ItemOffsetDecoration(10))
         val adapter = countriesAdapter
         countriesList.adapter = adapter
+        countriesList.scrollToPosition(adapter.itemCount - 1)
 
         countriesViewModel.refresh()
         observeViewModel()

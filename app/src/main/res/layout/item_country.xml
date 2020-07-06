@@ -23,7 +23,7 @@
             android:ellipsize="end"
             android:text="China"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/colorText"
+            android:textColor="@color/colorHint"
             android:textSize="22sp"
             android:fontFamily="@font/montserrat"/>
 
@@ -42,6 +42,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
+                android:textStyle="italic"
                 android:fontFamily="@font/montserrat"/>
 
             <TextView
@@ -52,7 +53,8 @@
                 android:text="Сегодня:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
 
         </LinearLayout>
 
@@ -70,7 +72,8 @@
                 android:text="Активно:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
 
 
             <TextView
@@ -82,7 +85,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
 
         </LinearLayout>
 
@@ -101,7 +105,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
 
             <TextView
                 android:id="@+id/tv_today_two"
@@ -110,7 +115,8 @@
                 android:text="Сегодня:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
 
         </LinearLayout>
 
@@ -128,7 +134,8 @@
                 android:text="Критические:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
 
             <TextView
                 android:id="@+id/tv_total_tests"
@@ -138,7 +145,8 @@
                 android:text="Всего тестов:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"/>
+                android:fontFamily="@font/montserrat"
+                android:textStyle="italic"/>
         </LinearLayout>
 
     </LinearLayout>
