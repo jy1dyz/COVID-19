@@ -21,132 +21,140 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
+            android:fontFamily="@font/montserrat"
             android:text="China"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorHint"
-            android:textSize="22sp"
-            android:fontFamily="@font/montserrat"/>
+            android:textSize="22sp" />
 
         <LinearLayout
             android:id="@+id/container_one"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_cases"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Случаи:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:textStyle="italic"
-                android:fontFamily="@font/montserrat"/>
+                />
 
             <TextView
                 android:id="@+id/tv_today"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Сегодня:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/container_two"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_active"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Активно:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                 />
 
 
             <TextView
                 android:id="@+id/tv_recovered"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Выздоровело:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                 />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/container_three"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_deaths"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Смертельные:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                />
 
             <TextView
                 android:id="@+id/tv_today_two"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:text="Сегодня:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                 />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/container_four"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_critical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat"
                 android:text="Критические:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                 />
 
             <TextView
                 android:id="@+id/tv_total_tests"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat"
                 android:text="Всего тестов:"
                 android:textColor="@color/colorHint"
                 android:textSize="16sp"
-                android:fontFamily="@font/montserrat"
-                android:textStyle="italic"/>
+                 />
         </LinearLayout>
 
     </LinearLayout>
@@ -154,7 +162,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/colorDivider"
-        android:layout_below="@id/container_for_whole"/>
+        android:layout_below="@id/container_for_whole"
+        android:background="@color/colorDivider" />
 
 </RelativeLayout>

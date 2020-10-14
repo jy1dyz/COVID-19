@@ -53,6 +53,37 @@ class CountryListAdapter(var countries: ArrayList<Country>) :
             active.text = country.active.plus(" active")
             critical.text = country.critical.plus(" critical")
             totalTests.text = country.totalTests.plus(" total tests")
+
+        }
+
+        fun checkNumbers(country: Country) {
+            when (country.cases?.length) {
+                2 -> {
+                    Log.i("TAG", "2")
+                }
+                3 -> {
+
+                }
+                4 -> {
+//                    cases.text = country.cases.toCharArray()[1].plus(".").toString()
+                    cases.text = country.cases[0].plus(",").plus(country.cases[1-3])
+                }
+                5 -> {
+
+                }
+                6 -> {
+
+                }
+                7 -> {
+
+                }
+                8 -> {
+
+                }
+                9 -> {
+
+                }
+            }
         }
     }
 
