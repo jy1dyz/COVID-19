@@ -25,7 +25,8 @@
             android:text="China"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorHint"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:id="@+id/container_one"
